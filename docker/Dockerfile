@@ -1,2 +1,2 @@
 FROM tomcat
-COPY demo.war  /opt/apache-tomcat-9.0.1/webapps/demo.war
+COPY simple.war  /opt/apache-tomcat-9.0.1/webapps/simple.war

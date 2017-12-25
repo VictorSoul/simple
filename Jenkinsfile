@@ -11,12 +11,12 @@ pipeline {
         stage('Package') {
             steps {
               sh 'mvn clean package'
-              sh 'mv -u target/demo-0.0.1-SNAPSHOT.war  docker/demo.war'
+              sh 'mv -u target/simple-0.0.1-SNAPSHOT.war  docker/simple.war'
             }
         }
         stage('Build') {
             steps {
-             sh "docker build -t demo:${GIT_BRANCH} docker/"
+             sh "docker build -t simple:${GIT_BRANCH} docker/"
         	}
         }
         stage('Push') {
