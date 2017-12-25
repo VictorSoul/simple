@@ -21,9 +21,8 @@ pipeline {
         }
         stage('Push') {
             steps {
-             sh 'pwd'
-             sh "docker tag demo:${GIT_BRANCH} 10.39.201.68:5000/demo:${GIT_BRANCH} "
-             sh "docker push 10.39.201.68:5000/demo:${GIT_BRANCH}"
+             sh "docker tag simple:${GIT_BRANCH} 10.39.107.141:5000/simple:${GIT_BRANCH} "
+             sh "docker push 10.39.107.141:5000/simple:${GIT_BRANCH}"
             }
         }
     }
